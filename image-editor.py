@@ -13,6 +13,5 @@ for filename in os.listdir(imgs_path):
     factor = 1.5
     enhancer = ImageEnhance.Contrast(edit)
     edit = enhancer.enhance(factor)
-
     clean_name = os.path.splitext(filename)[0]
     edit.save(f"{edited_imgs_path}/{clean_name}_edited.jpg")
